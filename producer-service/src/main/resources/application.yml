@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: producer
+  cloud:
+    stream:
+      bindings:
+        consumeUser-out-0:
+          destination: user-topic
+      kafka:
+        binder:
+          brokers: localhost:9092
+server:
+  port: 8081
